@@ -1,59 +1,206 @@
 <!DOCTYPE html>
-<html>
-<html lang="tr"> <!-- Geçerli sayfa dili -->
+<html lang="tr">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge"><!-- Internet Explorer için son motoru kullanma -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="150 Karakterden az olacak site açıklaması">
-	
-	<title>Basit HTML5</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Block Legend Tanıtım</title>
 
-	<meta name="robots" content="index,follow"><!-- Tüm arama motorları-->
-	<meta name="googlebot" content="index,follow"><!-- Google Benzersiz -->
-	
-	<link rel="stylesheet" href="custom.css"><!-- Dışarıdan css dosyası dahil etme -->
-	<link rel="icon" type="image/x-icon" href="https://www.ehliman.net/favicon.ico">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
 
-	<meta name="google" content="notranslate"><!-- Google bu dökümanı çevirmesin -->
+    body{
+      background:#111827;
+      color:white;
+      overflow-x:hidden;
+    }
 
-	<!-- Site sahipliği doğrulama -->
-	<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
-	<meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
-	<meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
-	<meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
-	<meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
-	<meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
+    header{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(135deg,#4f46e5,#9333ea);
+      padding:20px;
+    }
 
-	<!-- Tanımlama amacıyla client tarafında çerez bırakır -->
-	<meta http-equiv="set-cookie" content="name=value; expires=date; path=url">
+    header h1{
+      font-size:70px;
+      margin-bottom:20px;
+      animation:pop 1s ease;
+    }
 
-	<!-- Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://example.com/page.html">
-	<meta property="og:title" content="Content Title">
-	<meta property="og:image" content="https://example.com/image.jpg">
-	<meta property="og:description" content="Description Here">
-	<meta property="og:site_name" content="Site Name">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:image:width" content="1200"><!-- Opsiyoneldir fakat önerilir -->
-	<meta property="og:image:height" content="630"><!-- Opsiyoneldir fakat önerilir -->
+    header p{
+      max-width:700px;
+      font-size:22px;
+      line-height:1.6;
+      margin-bottom:30px;
+    }
 
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@site_account">
-	<meta name="twitter:creator" content="@individual_account">
-	<meta name="twitter:url" content="https://example.com/page.html">
-	<meta name="twitter:title" content="Content Title">
-	<meta name="twitter:description" content="Content description less than 200 characters">
-	<meta name="twitter:image" content="https://example.com/image.jpg">
-	
-	<script src="script.js"></script>
-	<script>
-  		// Javascript fonksiyonları
-	</script>
+    .btn{
+      padding:15px 35px;
+      background:#facc15;
+      color:#111827;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+      background:#fde047;
+    }
+
+    section{
+      padding:80px 20px;
+      text-align:center;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:#1f2937;
+      padding:30px;
+      border-radius:18px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#374151;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#facc15;
+    }
+
+    .preview{
+      display:grid;
+      grid-template-columns:repeat(8,40px);
+      gap:6px;
+      justify-content:center;
+      margin-top:40px;
+    }
+
+    .box{
+      width:40px;
+      height:40px;
+      background:#374151;
+      border-radius:6px;
+      animation:glow 2s infinite alternate;
+    }
+
+    .filled{
+      background:#8b5cf6;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#0f172a;
+      color:#94a3b8;
+    }
+
+    @keyframes glow{
+      from{
+        opacity:0.8;
+      }
+      to{
+        opacity:1;
+        transform:scale(1.05);
+      }
+    }
+
+    @keyframes pop{
+      from{
+        transform:scale(0.5);
+        opacity:0;
+      }
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    <h1>BLOCK Legend</h1>
+    <p>
+      Renkli blokları yerleştir, satırları patlat ve en yüksek skoru elde et!
+      Basit ama bağımlılık yapan puzzle deneyimi seni bekliyor.
+    </p>
+
+    <a href="#" class="btn">HEMEN OYNA</a>
+  </header>
+
+  <section>
+    <h2 style="font-size:40px;">Oyun Özellikleri</h2>
+
+    <div class="features">
+      <div class="card">
+        <h3>Kolay Oynanış</h3>
+        <p>Blokları sürükle ve tahtaya yerleştir. Her yaş için uygun.</p>
+      </div>
+
+      <div class="card">
+        <h3>Renkli Tasarım</h3>
+        <p>Modern efektler ve canlı renklerle eğlenceli deneyim.</p>
+      </div>
+
+      <div class="card">
+        <h3>Yüksek Skor</h3>
+        <p>Arkadaşlarınla yarış ve en yüksek puanı yap.</p>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="box filled"></div>
+      <div class="box filled"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box filled"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box filled"></div>
+
+      <div class="box"></div>
+      <div class="box filled"></div>
+      <div class="box filled"></div>
+      <div class="box"></div>
+      <div class="box filled"></div>
+      <div class="box filled"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box filled"></div>
+      <div class="box filled"></div>
+      <div class="box"></div>
+      <div class="box filled"></div>
+      <div class="box filled"></div>
+      <div class="box"></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Block Legend Demo - Tüm Hakları Saklıdır
+  </footer>
 
 </body>
 </html>
